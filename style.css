@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #837E9F;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #302F3D;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0px;
+    left: -315px;
+    width: 370px;
+    height: 100%;
+    background-color: #22212C;
+    transition: all 300ms ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0px 15px 15px 0px;
+}
+/*#e3edf7*/
+.sidebar .toggle-btn{
+    position: absolute;
+    top: 16px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.sidebar .toggle-btn span{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #837E9F;
+    transform: translateY(-50%);
+    transition: all 300ms ease-in-out;
+}
+
+.sidebar .toggle-btn span:nth-child(1){
+    top: 10%;
+}
+
+.sidebar .toggle-btn span:nth-child(2){
+    top: 50%;
+}
+
+.sidebar .toggle-btn span:nth-child(3){
+    top: 90%;
+}
+
+.sidebar.active{
+    left: 0px;
+}
+
+.sidebar.active .toggle-btn span:nth-child(1){
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.sidebar.active .toggle-btn span:nth-child(2){
+    display: none;
+}
+
+.sidebar.active .toggle-btn span:nth-child(3){
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.profile--pic img{
+    width: 100px;
+    border-radius: 50%;
+}
+
+.myself{
+    padding-inline: 12%;
+}
+
+.main-title{
+    font-size: 24px;
+}
+
+.cargo{
+    font-size: 16px;
+}
+
+.stacks{
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline: 10%;
+    justify-content: center;
+    width: 100%;
+}
+
+.card-stack{
+    position: relative;
+    width: 100px;
+    height: 133px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-stack .percent{
+    position: relative;
+    width: 70px;
+    height: 70px;
+}
+
+.card-stack .percent svg{
+    position: relative;
+    width: 70px;
+    height: 70px;
+}
+
+.card-stack .percent svg circle{
+    width: 60px;
+    height: 60px;
+    fill: none;
+    stroke-width: 5;
+    stroke: #000;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 190;
+    stroke-dashoffset: 190;
+}
+
+.card-stack .percent svg circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke: #f3f3f3;
+}
+
+.card-stack .percent svg circle:nth-child(2){
+    stroke-dashoffset: calc(190 - (190 * 87) / 100);
+    stroke: url(#GradientColor);
+}
+
+.card-stack .percent svg.css circle:nth-child(2){
+    stroke-dashoffset: calc(190 - (190 * 75) / 100);
+    stroke: url(#GradientColor);
+}
+
+.card-stack .percent svg.js circle:nth-child(2){
+    stroke-dashoffset: calc(190 - (190 * 65) / 100);
+    stroke: url(#GradientColor);
+}
+
+.card-stack .percent svg.react circle:nth-child(2){
+    stroke-dashoffset: calc(190 - (190 * 45) / 100);
+    stroke: url(#GradientColor);
+}
+
+.card-stack .percent svg.git circle:nth-child(2){
+    stroke-dashoffset: calc(190 - (190 * 80) / 100);
+    stroke: url(#GradientColor);
+}
+
+.card-stack .percent svg.ingles circle:nth-child(2){
+    stroke-dashoffset: calc(190 - (190 * 77) / 100);
+    stroke: url(#GradientColor);
+}
+
+.card-stack .percent .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-stack .percent .number h2 span{
+    font-size: 12px;
+}
+
+.tech-name{
+    font-size: 18px;
+}
+
+.title-part{
+    text-align: center;
+}
+
+.my--projects{
+    margin-inline: 2%;
+    margin-top: 10px;
+    background-color: #302F3D;
+    width: 96%;
+    height: 100%;
+    padding: 2%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.projects--title{
+    margin-bottom: 20px;
+}
+
+.project--cards{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    position: relative;
+    width: 30%;
+    max-width: 300px;
+    min-width: 280px;
+    height: 350px;
+    background-color: #22212C;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.imagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.imagem img{
+    width: 90%;
+}
+
+.project--name{
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.github{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #8257E5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 0px 8px 8px;
+    text-decoration: none;
+}
+
+.fa-github{
+    font-size: 25px;
+    color: black;
+}
+
+@media(max-width:500px){
+    .sidebar {
+        left: -85vw;
+        width: 100vw;
+    }
+
+    .stacks{
+        padding-inline: 20%;
+    }
+
+    .project--cards{
+        margin-left: 50px;
+    }
+
+    .card{
+        min-width: 260px;
+    }
+}
+
+@media(max-width:500px){
+    .stacks{
+        padding-inline: 10%;
+    }
+}
