@@ -28,10 +28,19 @@ body{
 .sidebar .toggle-btn{
     position: absolute;
     top: 16px;
-    right: 30px;
+    right: 16px;
     width: 30px;
     height: 30px;
     cursor: pointer;
+}
+
+.fa-arrow-right-to-bracket{
+    font-size: 23px;
+    transition: all ease-in 0.1s;
+}
+
+.fa-arrow-right-to-bracket.active-btn{
+    transform: rotateZ(180deg);
 }
 
 .sidebar .toggle-btn span{
